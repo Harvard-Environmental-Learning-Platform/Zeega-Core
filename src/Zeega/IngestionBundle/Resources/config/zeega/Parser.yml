@@ -9,27 +9,12 @@ zeega.parsers:
             parser_class: Zeega\IngestionBundle\Parser\Flickr\ParserFlickrPhoto
             parameters:
                 authentication_key: %flickr_key%
-        set_parser:
-            regex: "#https?://(?:www\.)?flickr\.com/photos/[^/]+/sets/([0-9]+)#"
-            is_set: true
-            parser_class: Zeega\IngestionBundle\Parser\Flickr\ParserFlickrSet
-            parameters:
-                authentication_key: %flickr_key%
-        tag_parser:
-            regex: "#https?://(?:www\.)?flickr\.com/photos/.*/tags/([a-zA-Z0-9\-_]+)#"
-            is_set: true
-            parser_class: Zeega\IngestionBundle\Parser\Flickr\ParserFlickrTag
-            parameters:
-                authentication_key: %flickr_key%
+
     facebook.com:
         item_parser:
             regex: /https?:\/\/(?:www\.)?facebook.com\/photo.php\?fbid=([0-9]+)&set=([a-zA-Z0-9]+).([0-9]+).([0-9]+).([0-9]+)*/
             is_set: false
             parser_class: Zeega\IngestionBundle\Parser\Facebook\ParserFacebookPhoto
-        set_parser:
-            regex: /https?:\/\/(?:www\.)?facebook.com\/media\/set\/\?set=([a-zA-Z0-9]+).([0-9]+).([0-9]+).([0-9]+)*/
-            is_set: true
-            parser_class: Zeega\IngestionBundle\Parser\Facebook\ParserFacebookSet
 
     dropbox.com:
         item_parser:
@@ -42,42 +27,17 @@ zeega.parsers:
             is_set: false
             parser_class: Zeega\IngestionBundle\Parser\Instagram\ParserInstagramItem
 
-        tag_parser:
-            regex: /instagram-tag-parser/
-            is_set: true
-            parser_class: Zeega\IngestionBundle\Parser\Instagram\ParserInstagramTag
-
     youtube.com:
         item_parser:
             regex: /https?:\/\/(?:www\.)?youtube.*watch\?v=([a-zA-Z0-9\-_]+)/
             is_set: false
             parser_class: Zeega\IngestionBundle\Parser\Youtube\ParserYoutubeVideo
-        set_parser:
-            regex: /https?:\/\/(?:www\.)?youtube.*list=([a-zA-Z0-9\-_]+)+/
-            is_set: true
-            parser_class: Zeega\IngestionBundle\Parser\Youtube\ParserYoutubePlaylist
-        set_parser2:
-            regex: /https?:\/\/(?:www\.)?youtube.com\/p\/([a-zA-Z0-9\-_]+)/
-            is_set: true
-            parser_class: Zeega\IngestionBundle\Parser\Youtube\ParserYoutubePlaylist
-        tag_parser:
-            regex: /https?:\/\/(?:www\.)?youtubeeee.com\/p\/([a-zA-Z0-9\-_]+)/
-            is_set: true
-            parser_class: Zeega\IngestionBundle\Parser\Youtube\ParserYoutubeTag
 
     soundcloud.com: #order matters (last regex matches any soundlcoud url)
         item_parser:
             regex: /https?:\/\/(?:www\.)?soundcloud.com.*\/sets\/.*/
             is_set: true
             parser_class: Zeega\IngestionBundle\Parser\Soundcloud\ParserSoundcloudSet
-        set_parser:
-            regex: /https?:\/\/(?:www\.)?soundcloud.com.*/
-            is_set: false
-            parser_class: Zeega\IngestionBundle\Parser\Soundcloud\ParserSoundcloudItem
-        tag_parser:
-            regex: /https?:\/\/(?:www\.)?soundcloud.com/impossibleregex/
-            is_set: true
-            parser_class: Zeega\IngestionBundle\Parser\Soundcloud\ParserSoundcloudTag
 
     giphy.com:
         item_parser:
@@ -88,12 +48,6 @@ zeega.parsers:
             regex: /https?:\/\/(?:www\.)?giphy.com.*\/embed\/([a-zA-Z0-9\-_]+)\/*/
             is_set: false
             parser_class: Zeega\IngestionBundle\Parser\Giphy\ParserGiphyItem
-
-    dp.la:
-        set_parser:
-            regex: /http:\/\/(?:api\.)?dp.la\/.*/
-            is_set: true
-            parser_class: Zeega\IngestionBundle\Parser\DPLA\ParserDPLASet
 
     mapbox.com:
         item_parser:
