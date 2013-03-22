@@ -84,11 +84,17 @@
             else url+="sort=date-desc";
             
             if( !_.isUndefined(this.query.content) && "all" !== this.query.content ){
-                url += "&type=" + this.query.content;
-                if(this.query.content==='project'){
-                    url+="&fields=media_geo_latitude,media_geo_longitude,media_creator_username,media_creator_realname,id,attribution_uri,thumbnail_url,uri,title,description,date_created,media_type,tags,layer_type,display_name,eidtable,published";
-                } else if (this.query.content==='Collection' && (_.isUndefined(this.query.q) || this.query.q.length === 0)){
-                    url+="&data_source=db";
+                if(this.query.content === "Course"){
+                    url += "layer_type=Course";
+                } else {
+                    url += "&type=" + this.query.content;
+                }
+
+                
+                if(this.query.content === "project"){
+                    url +="&fields=media_geo_latitude,media_geo_longitude,media_creator_username,media_creator_realname,id,attribution_uri,thumbnail_url,uri,title,description,date_created,media_type,tags,layer_type,display_name,eidtable,published";
+                } else if (this.query.content === "Collection" && (_.isUndefined(this.query.q) || this.query.q.length === 0)){
+                    url += "&data_source=db";
                 }
             } else {
                 url += "&type=-project";
