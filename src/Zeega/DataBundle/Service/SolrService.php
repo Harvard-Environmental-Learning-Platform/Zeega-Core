@@ -91,6 +91,11 @@ class SolrService
             $solrQuery->createFilterQuery('mediaType')->setQuery("mediaType:(".$query["type"].")");
         }
 
+        // media type
+        if(isset($query["layer_type"])) {
+            $solrQuery->createFilterQuery('layerType')->setQuery("layerType:(".$query["layer_type"].")");
+        }
+
         if(isset($query["geo_located"]) && $query["geo_located"] == 1) {
             $solrQuery->createFilterQuery('geo')->setQuery("mediaGeoLongitude:[-180 TO 180] AND mediaGeoLatitude:[-90 TO 90]");
         }
