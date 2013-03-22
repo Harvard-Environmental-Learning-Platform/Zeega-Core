@@ -2,7 +2,6 @@ imports:
     - { resource: parameters.ini }
     - { resource: security.yml }
     - { resource: @ZeegaIngestionBundle/Resources/config/services.yml }
-    - { resource: @ZeegaSocialBundle/Resources/config/services.yml }
 
 framework:
     #esi:             ~
@@ -124,32 +123,7 @@ nelmio_solarium:
             core: %solr_core%
             timeout: 5
 
-old_sound_rabbit_mq:
-    connections:
-        default:
-            host:      %rabbitmq_host%
-            port:      %rabbitmq_port%
-            user:      %rabbitmq_user%
-            password:  %rabbitmq_password%
-            vhost:     %rabbitmq_vhost%
-    producers:
-        celery_task:
-            connection: default
-            exchange_options: {name: 'celery', type: direct}
 
 fos_rest:
     routing_loader:
         default_format: json
-
-fos_twitter:
-        file: %kernel.root_dir%/../vendor/kertz/twitteroauth/twitteroauth/twitteroauth.php
-        consumer_key: %twitter_consumer_key%
-        consumer_secret: %twitter_consumer_secret%
-        callback_url: %twitter_callback_url%
-
-fos_facebook:
-    alias:  facebook
-    app_id: %facebook_appid%
-    secret: %facebook_secret%
-    cookie: true
-    permissions: [email, user_birthday, user_location]

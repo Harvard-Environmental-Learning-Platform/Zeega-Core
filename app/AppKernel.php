@@ -29,9 +29,6 @@ class AppKernel extends Kernel
             new JMS\SerializerBundle\JMSSerializerBundle($this),
             new FOS\RestBundle\FOSRestBundle(),
             new Nelmio\SolariumBundle\NelmioSolariumBundle(),
-            new OldSound\RabbitMqBundle\OldSoundRabbitMqBundle(),
-            new FOS\TwitterBundle\FOSTwitterBundle(),
-            new FOS\FacebookBundle\FOSFacebookBundle(),
     
             new Zeega\ApiBundle\ZeegaApiBundle(),
             new Zeega\AdminBundle\ZeegaAdminBundle(),
@@ -43,7 +40,6 @@ class AppKernel extends Kernel
             new Zeega\CommunityBundle\ZeegaCommunityBundle(),
             new Zeega\BookmarkletBundle\ZeegaBookmarkletBundle(),
             new Zeega\UserBundle\ZeegaUserBundle(),
-            new Zeega\SocialBundle\ZeegaSocialBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

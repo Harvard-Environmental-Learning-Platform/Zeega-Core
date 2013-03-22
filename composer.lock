@@ -1,5 +1,5 @@
 {
-    "hash": "c31fdeacb4008b1b17dfbb4b7552f551",
+    "hash": "f910d0adf1049026ffb1add737f5d16b",
     "packages": [
         {
             "name": "doctrine/common",
@@ -55,7 +55,7 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
+                    "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -72,20 +72,20 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "2.3.2",
+            "version": "2.3.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/doctrine/dbal",
-                "reference": "2.3.2"
+                "url": "https://github.com/doctrine/dbal.git",
+                "reference": "2.3.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/dbal/archive/2.3.2.zip",
-                "reference": "2.3.2",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/2.3.3",
+                "reference": "2.3.3",
                 "shasum": ""
             },
             "require": {
-                "doctrine/common": "2.3.*",
+                "doctrine/common": ">=2.3.0,<2.5-dev",
                 "php": ">=5.3.2"
             },
             "type": "library",
@@ -99,6 +99,7 @@
                     "Doctrine\\DBAL": "lib/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -130,7 +131,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2013-01-08 01:03:43"
+            "time": "2013-03-24 19:16:29"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -173,6 +174,7 @@
                     "Doctrine\\Bundle\\DoctrineBundle": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -198,20 +200,20 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2013-01-12 18:20:23"
+            "time": "2013-01-12 13:20:23"
         },
         {
             "name": "doctrine/orm",
-            "version": "2.3.2",
+            "version": "2.3.3",
             "source": {
                 "type": "git",
-                "url": "git://github.com/doctrine/doctrine2.git",
-                "reference": "2.3.2"
+                "url": "https://github.com/doctrine/doctrine2.git",
+                "reference": "2.3.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/doctrine2/archive/2.3.2.zip",
-                "reference": "2.3.2",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/2.3.3",
+                "reference": "2.3.3",
                 "shasum": ""
             },
             "require": {
@@ -238,6 +240,7 @@
                     "Doctrine\\ORM": "lib/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -267,132 +270,31 @@
                 "database",
                 "orm"
             ],
-            "time": "2013-01-08 01:05:04"
-        },
-        {
-            "name": "facebook/php-sdk",
-            "version": "v3.2.0",
-            "source": {
-                "type": "git",
-                "url": "git://github.com/facebook/facebook-php-sdk.git",
-                "reference": "v3.2.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/facebook/facebook-php-sdk/zipball/v3.2.0",
-                "reference": "v3.2.0",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "ext-json": "*",
-                "php": ">=5.2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "src"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache2"
-            ],
-            "authors": [
-                {
-                    "name": "Facebook",
-                    "homepage": "https://github.com/facebook/facebook-php-sdk/contributors"
-                }
-            ],
-            "description": "Facebook PHP SDK",
-            "homepage": "https://github.com/facebook/facebook-php-sdk",
-            "keywords": [
-                "facebook",
-                "sdk"
-            ],
-            "time": "2012-08-14 10:28:20"
-        },
-        {
-            "name": "friendsofsymfony/facebook-bundle",
-            "version": "1.1.0",
-            "target-dir": "FOS/FacebookBundle",
-            "source": {
-                "type": "git",
-                "url": "git://github.com/FriendsOfSymfony/FOSFacebookBundle.git",
-                "reference": "1.1.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/FriendsOfSymfony/FOSFacebookBundle/archive/1.1.0.zip",
-                "reference": "1.1.0",
-                "shasum": ""
-            },
-            "require": {
-                "facebook/php-sdk": "v3.2",
-                "php": ">=5.3.2",
-                "symfony/framework-bundle": ">=2.1,<2.3",
-                "symfony/security-bundle": ">=2.1,<2.3",
-                "symfony/twig-bundle": ">=2.1,<2.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "3.7"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "FOS\\FacebookBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Kris Wallsmith",
-                    "email": "kris.wallsmith@gmail.com",
-                    "homepage": "http://kriswallsmith.net/"
-                },
-                {
-                    "name": "FriendsOfSymfony Community",
-                    "homepage": "https://github.com/friendsofsymfony/FOSFacebookBundle/contributors"
-                }
-            ],
-            "description": "Integrate the Facebook Platform into your Symfony2 application.",
-            "homepage": "http://friendsofsymfony.github.com",
-            "keywords": [
-                "facebook"
-            ],
-            "time": "2013-01-20 19:15:02"
+            "time": "2013-03-24 20:43:58"
         },
         {
             "name": "friendsofsymfony/rest",
-            "version": "0.7.0",
+            "version": "0.8.0",
             "target-dir": "FOS/Rest",
             "source": {
                 "type": "git",
-                "url": "https://github.com/FriendsOfSymfony/FOSRest",
-                "reference": "0.7.0"
+                "url": "https://github.com/FriendsOfSymfony/FOSRest.git",
+                "reference": "0.8.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/FriendsOfSymfony/FOSRest/zipball/0.7.0",
-                "reference": "0.7.0",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRest/zipball/0.8.0",
+                "reference": "0.8.0",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
-                "symfony/http-foundation": ">=2.0,<2.2-dev"
+                "symfony/http-foundation": ">=2.0,<3.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.7.x-dev"
+                    "dev-master": "0.8.x-dev"
                 }
             },
             "autoload": {
@@ -400,6 +302,7 @@
                     "FOS\\Rest": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -418,7 +321,7 @@
             "keywords": [
                 "rest"
             ],
-            "time": "2012-06-14 16:24:53"
+            "time": "2013-03-02 20:35:05"
         },
         {
             "name": "friendsofsymfony/rest-bundle",
@@ -457,6 +360,7 @@
                     "FOS\\RestBundle": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -481,50 +385,6 @@
                 "rest"
             ],
             "time": "2012-09-23 13:32:09"
-        },
-        {
-            "name": "friendsofsymfony/twitter-bundle",
-            "version": "dev-master",
-            "target-dir": "FOS/TwitterBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfSymfony/FOSTwitterBundle.git",
-                "reference": "af7ba5839b1b5d17c0a0efc32df10fe1bb092d68"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSTwitterBundle/zipball/af7ba5839b1b5d17c0a0efc32df10fe1bb092d68",
-                "reference": "af7ba5839b1b5d17c0a0efc32df10fe1bb092d68",
-                "shasum": ""
-            },
-            "require": {
-                "kertz/twitteroauth": "*",
-                "php": ">=5.3.2",
-                "symfony/framework-bundle": "2.*",
-                "symfony/security-bundle": ">=2.1,<2.3-dev"
-            },
-            "type": "symfony-bundle",
-            "autoload": {
-                "psr-0": {
-                    "FOS\\TwitterBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "FriendsOfSymfony Community",
-                    "homepage": "https://github.com/FriendsOfSymfony/FOSTwitterBundle/contributors"
-                }
-            ],
-            "description": "Symfony FOSTwitterBundle",
-            "homepage": "http://friendsofsymfony.github.com",
-            "keywords": [
-                "Twitter authentication"
-            ],
-            "time": "2013-02-11 23:09:22"
         },
         {
             "name": "friendsofsymfony/user-bundle",
@@ -619,6 +479,7 @@
                     "lib"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "LGPL"
             ],
@@ -635,7 +496,7 @@
                 "highlight",
                 "sql"
             ],
-            "time": "2012-12-23 02:46:50"
+            "time": "2012-12-22 21:46:50"
         },
         {
             "name": "jms/aop-bundle",
@@ -662,6 +523,7 @@
                     "JMS\\AopBundle": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache"
             ],
@@ -669,7 +531,7 @@
                 {
                     "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -703,6 +565,7 @@
                     "CG\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache"
             ],
@@ -761,6 +624,7 @@
                     "JMS\\DiExtraBundle": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache"
             ],
@@ -768,7 +632,7 @@
                 {
                     "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
+                    "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -778,7 +642,7 @@
                 "annotations",
                 "dependency injection"
             ],
-            "time": "2012-09-21 05:56:32"
+            "time": "2012-09-21 01:56:32"
         },
         {
             "name": "jms/metadata",
@@ -803,6 +667,7 @@
                     "Metadata\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache"
             ],
@@ -865,6 +730,7 @@
                     "JMS\\SecurityExtraBundle": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache2"
             ],
@@ -925,6 +791,7 @@
                     "JMS\\SerializerBundle": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache2"
             ],
@@ -946,32 +813,6 @@
                 "xml"
             ],
             "time": "2012-09-20 14:23:52"
-        },
-        {
-            "name": "kertz/twitteroauth",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kertz/twitteroauth",
-                "reference": "30d9fba685516cfeee12bdf0aa50d803f112214b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kertz/twitteroauth/zipball/30d9fba685516cfeee12bdf0aa50d803f112214b",
-                "reference": "30d9fba685516cfeee12bdf0aa50d803f112214b",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "twitteroauth"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "time": "2012-08-02 14:24:38"
         },
         {
             "name": "knplabs/knp-menu",
@@ -1011,6 +852,7 @@
                     "Knp\\Menu\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1034,26 +876,26 @@
                 "menu",
                 "tree"
             ],
-            "time": "2012-06-10 13:20:40"
+            "time": "2012-06-10 09:20:40"
         },
         {
             "name": "knplabs/knp-menu-bundle",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "target-dir": "Knp/Bundle/MenuBundle",
             "source": {
                 "type": "git",
-                "url": "http://github.com/KnpLabs/KnpMenuBundle.git",
-                "reference": "v1.1.0"
+                "url": "https://github.com/KnpLabs/KnpMenuBundle.git",
+                "reference": "v1.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/KnpLabs/KnpMenuBundle/zipball/v1.1.0",
-                "reference": "v1.1.0",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/v1.1.1",
+                "reference": "v1.1.1",
                 "shasum": ""
             },
             "require": {
                 "knplabs/knp-menu": "1.1.*",
-                "symfony/framework-bundle": ">=2.0,<2.2-dev"
+                "symfony/framework-bundle": ">=2.0,<2.3-dev"
             },
             "type": "symfony-bundle",
             "autoload": {
@@ -1061,6 +903,7 @@
                     "Knp\\Bundle\\MenuBundle": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1082,7 +925,7 @@
             "keywords": [
                 "menu"
             ],
-            "time": "2012-05-17 04:56:49"
+            "time": "2012-11-28 20:05:09"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -1090,12 +933,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kriswallsmith/assetic.git",
-                "reference": "v1.1.0-alpha4"
+                "reference": "89e9837425ec32dedf1c90bb3cc48056b9315113"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/v1.1.0-alpha4",
-                "reference": "v1.1.0-alpha4",
+                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/89e9837425ec32dedf1c90bb3cc48056b9315113",
+                "reference": "89e9837425ec32dedf1c90bb3cc48056b9315113",
                 "shasum": ""
             },
             "require": {
@@ -1153,7 +996,7 @@
                 "compression",
                 "minification"
             ],
-            "time": "2013-02-24 17:22:20"
+            "time": "2013-03-20 02:05:59"
         },
         {
             "name": "monolog/monolog",
@@ -1165,7 +1008,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/Seldaek/monolog/zipball/1.2.1",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1.2.1",
                 "reference": "1.2.1",
                 "shasum": ""
             },
@@ -1191,6 +1034,7 @@
                     "Monolog": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1208,7 +1052,7 @@
                 "log",
                 "logging"
             ],
-            "time": "2012-08-29 08:53:20"
+            "time": "2012-08-29 11:53:20"
         },
         {
             "name": "nelmio/solarium-bundle",
@@ -1243,6 +1087,7 @@
                     "Nelmio\\SolariumBundle": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1262,29 +1107,7 @@
                 "solarium",
                 "solr"
             ],
-            "time": "2013-01-07 15:35:43"
-        },
-        {
-            "name": "oldsound/rabbitmq-bundle",
-            "version": "dev-zeega",
-            "target-dir": "OldSound/RabbitMqBundle",
-            "source": {
-                "type": "git",
-                "url": "git://github.com/luisbrandao/RabbitMqBundle.git",
-                "reference": "dev-zeega"
-            },
-            "require": {
-                "php": ">=5.3.0",
-                "symfony/framework-bundle": ">=2.0",
-                "symfony/yaml": ">=2.0",
-                "videlalvaro/php-amqplib": "dev-master"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "OldSound\\RabbitMqBundle\\": ""
-                }
-            }
+            "time": "2013-01-07 10:35:43"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -1476,12 +1299,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "d325a9d0658cf0ad1d74058cf5d99e5f0f065ea8"
+                "reference": "eefc5316ad39dd3e607be231ae2150d85cb2fc83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/d325a9d0658cf0ad1d74058cf5d99e5f0f065ea8",
-                "reference": "d325a9d0658cf0ad1d74058cf5d99e5f0f065ea8",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/eefc5316ad39dd3e607be231ae2150d85cb2fc83",
+                "reference": "eefc5316ad39dd3e607be231ae2150d85cb2fc83",
                 "shasum": ""
             },
             "require": {
@@ -1543,7 +1366,7 @@
                 "bootstrap",
                 "sonata"
             ],
-            "time": "2013-03-04 15:17:16"
+            "time": "2013-03-13 13:57:27"
         },
         {
             "name": "sonata-project/block-bundle",
@@ -1667,16 +1490,16 @@
         },
         {
             "name": "sonata-project/exporter",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/exporter.git",
-                "reference": "1.2.0"
+                "reference": "1.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/exporter/zipball/1.2.0",
-                "reference": "1.2.0",
+                "url": "https://api.github.com/repos/sonata-project/exporter/zipball/1.2.1",
+                "reference": "1.2.1",
                 "shasum": ""
             },
             "require": {
@@ -1716,7 +1539,7 @@
                 "export",
                 "xls"
             ],
-            "time": "2013-02-22 11:58:00"
+            "time": "2013-03-04 14:20:46"
         },
         {
             "name": "sonata-project/jquery-bundle",
@@ -1794,6 +1617,7 @@
                     "lib/swift_required.php"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "LGPL"
             ],
@@ -1812,7 +1636,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2012-10-25 05:30:40"
+            "time": "2012-10-25 01:30:40"
         },
         {
             "name": "symfony/assetic-bundle",
@@ -2085,12 +1909,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig-extensions.git",
-                "reference": "921799aaf05f88af749d72912d6b154dfeb9a03e"
+                "reference": "v1.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig-extensions/zipball/921799aaf05f88af749d72912d6b154dfeb9a03e",
-                "reference": "921799aaf05f88af749d72912d6b154dfeb9a03e",
+                "url": "https://api.github.com/repos/fabpot/Twig-extensions/zipball/v1.0.0",
+                "reference": "v1.0.0",
                 "shasum": ""
             },
             "require": {
@@ -2174,47 +1998,6 @@
                 "templating"
             ],
             "time": "2013-02-09 18:21:53"
-        },
-        {
-            "name": "videlalvaro/php-amqplib",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/videlalvaro/php-amqplib.git",
-                "reference": "v2.0.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/videlalvaro/php-amqplib/zipball/v2.0.2",
-                "reference": "v2.0.2",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "PhpAmqpLib": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL-2.1"
-            ],
-            "authors": [
-                {
-                    "name": "Alvaro Videla"
-                }
-            ],
-            "description": "This library is a pure PHP implementation of the AMQP protocol. It's been tested against RabbitMQ.",
-            "homepage": "https://github.com/videlalvaro/php-amqplib/",
-            "keywords": [
-                "message",
-                "queue",
-                "rabbitmq"
-            ],
-            "time": "2013-02-13 19:43:51"
         }
     ],
     "packages-dev": [
@@ -2228,11 +2011,7 @@
         "twig/extensions": 20,
         "kriswallsmith/assetic": 20,
         "sonata-project/admin-bundle": 20,
-        "sonata-project/doctrine-orm-admin-bundle": 20,
-        "oldsound/rabbitmq-bundle": 20,
-        "videlalvaro/php-amqplib": 20,
-        "friendsofsymfony/twitter-bundle": 20,
-        "kertz/twitteroauth": 20
+        "sonata-project/doctrine-orm-admin-bundle": 20
     },
     "platform": {
         "php": ">=5.3.3"
