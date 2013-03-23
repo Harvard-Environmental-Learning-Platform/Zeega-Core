@@ -290,7 +290,50 @@ this.zeega = {
         this.loadFrame( this.getLeftFrame() );
     },
     
-    loadRightFrame : function(){ this.loadFrame( this.getRightFrame() ); }
+    loadRightFrame : function(){ this.loadFrame( this.getRightFrame() ); },
+
+    addItem : function(obj){
+        var _this = this,
+            Items = zeega.module("items");
+
+        newItem = new Backbone.Model({
+            // "id": 89582,
+            // "user_id": 6,
+            // "username": "",
+            // "display_name": "",
+            "title": obj.title,
+            "headline": "",
+            "description": "",
+            "text": "",
+            "uri": obj.url,
+            "attribution_uri": obj.url,
+            //"date_created": "2013-02-24 22:36:57",
+            "media_type": "Image",
+            "layer_type": "Image",
+            "archive": "Absolute",
+            "thumbnail_url": obj.url,
+            "media_geo_latitude": null,
+            "media_geo_longitude": null,
+            "media_date_created": "2013-02-24 10:36:43",
+            "media_creator_username": sessionStorage.getItem('display_name'),
+            "media_creator_realname": sessionStorage.getItem('display_name'),
+            "child_items_count": 0,
+            // "attributes": [],
+            // "child_items": [],
+            // "tags": [],
+            "editable": true,
+            "published": false,
+            "enabled": true
+
+        });
+
+        newItem.url = sessionStorage.getItem('hostname') + sessionStorage.getItem('directory') + "api/items";
+        
+        newItem.save({},{success: function( model, response ){
+            _this.refreshDatabase();
+        }});
+
+    }
 
     
 }, Backbone.Events)

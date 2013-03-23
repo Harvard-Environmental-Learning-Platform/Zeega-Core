@@ -4,8 +4,16 @@
 
         url: function()
         {
-            // http://dev.zeega.org/jda/web/api/items/703493
-            return sessionStorage.getItem('hostname') + sessionStorage.getItem('directory') + "api/items/" + this.id;
+            var url;
+
+            if(_.isUndefined(this.id)){
+                url = zeega.app.apiLocation + "api/items";
+            } else {
+                url = zeega.app.apiLocation + "api/items/"+this.id;
+            }
+            console.log(url, this.id, "ok");
+            return url;
+
         },
 
         initialize : function(){}
