@@ -13,7 +13,7 @@
 			this.model.on('blur', this.blur, this );
 
 			this.model.on( 'thumbUpdateFail', function(){
-				_this.$el.find('.frame-update-overlay').hide()
+				_this.$el.find('.frame-update-overlay').hide();
 			});
 		},
 		
@@ -117,7 +117,7 @@
 	
 		getTemplate : function()
 		{
-			var html = 
+			var html =
 			
 				
 				"<div class='frame-update-overlay'></div>"+

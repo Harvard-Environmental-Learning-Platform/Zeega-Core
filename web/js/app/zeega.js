@@ -72,11 +72,7 @@ this.zeega = {
             collectionsBS,
             Items = zeega.module("items");
         
-        itemsBS = jQuery.parseJSON(itemsJSON);
 
-        this.items = new Items.Collection(itemsBS.items);
-        this.items.totalItemsCount = itemsBS.items_count;
-        this.items.itemCollectionView.render();
 
         //Collection Selector
 
@@ -100,6 +96,12 @@ this.zeega = {
         $("#collection-selector").change( function(){
             zeega.app.refreshDatabase();
         });
+
+
+        itemsBS = jQuery.parseJSON(itemsJSON);
+        this.items = new Items.Collection(itemsBS.items);
+        this.items.totalItemsCount = itemsBS.items_count;
+        this.items.itemCollectionView.render();
 
 
     },

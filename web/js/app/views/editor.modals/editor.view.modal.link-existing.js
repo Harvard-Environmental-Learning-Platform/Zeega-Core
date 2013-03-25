@@ -12,13 +12,14 @@
 			
 			//fill options for selecting a sequence
 			_.each( _.toArray(zeega.app.project.sequences), function(sequence){
-				$(_this.el).find('.sequence-choose-select').append('<option value="'+sequence.id+'">'+ sequence.get('title') +'</option>')
-			})
+				$(_this.el).find('.sequence-choose-select').append('<option value="'+sequence.id+'">'+ sequence.get('title') +'</option>');
+			});
 			
 			_.each( zeega.app.project.sequences.at(0).get('frames'), function(frameID){
+				console.log("rendering some thumbs", zeega.app.project.frames.get(frameID).get('thumbnail_url'));
 				if(zeega.app.currentFrame.id == frameID)
-					_this.$el.find('.frame-choose-list').append('<li class="frame-thumb-no-choose-icon" data-id="'+ frameID +'"><img src="'+ zeega.app.project.frames.get(frameID).get('thumbnail_url') +'"/></li>')
-				else _this.$el.find('.frame-choose-list').append('<li class="frame-thumb-choose-icon" data-id="'+ frameID +'"><img src="'+ zeega.app.project.frames.get(frameID).get('thumbnail_url') +'"/></li>')
+					_this.$el.find('.frame-choose-list').append('<li class="frame-thumb-no-choose-icon" data-id="'+ frameID +'"><div style="height: 50px; width:67px;background-color:grey; background: url(\"'+ zeega.app.project.frames.get(frameID).get('thumbnail_url') +'\")" ></div></li>');
+				else _this.$el.find('.frame-choose-list').append('<li class="frame-thumb-choose-icon" data-id="'+ frameID +'"><div style="cursor: pointer; height: 50px; width:67px;background-color:black; background: url(\"'+ zeega.app.project.frames.get(frameID).get('thumbnail_url') +'\")" ></div></li>');
 			});
 			
 			this.targetSequence = zeega.app.project.sequences.at(0).id;
@@ -26,7 +27,7 @@
 			return this;
 		},
 		
-		show : function(){ this.$el.modal('show') },
+		show : function(){ this.$el.modal('show'); },
 		
 		hide : function()
 		{
@@ -52,7 +53,7 @@
 			
 			$(this.el).find('.frame-choose-list').empty();
 			_.each( zeega.app.project.sequences.get( sequenceID ).get('frames'), function(frameID){
-				$(_this.el).find('.frame-choose-list').append('<li class="frame-thumb-choose-icon" data-id="'+ frameID +'"><img src="'+ zeega.app.project.frames.get(frameID).get('thumbnail_url') +'"/></li>')
+				$(_this.el).find('.frame-choose-list').append('<li class="frame-thumb-choose-icon" data-id="'+ frameID +'"><img src="'+ zeega.app.project.frames.get(frameID).get('thumbnail_url') +'"/></li>');
 			});
 			this.targetSequence = sequenceID;
 		},
@@ -82,12 +83,12 @@
 			'<div class="" id="sequence-modal">'+
 				'<div class="modal-header clearfix">'+
 					'<button class="close">×</button>'+
-					
+					'<h2>Create a link to another Slide</h2>'+
 				'</div>'+
 				'<div class="modal-body">'+
 					'<h4>1. Choose Sequence:</h4>'+
 					'<select class="sequence-choose-select"></select>'+
-					'<h4>2. Choose Frame:</h4>'+
+					'<h4>2. Choose Slide:</h4>'+
 					'<ul class="frame-choose-list unstyled clearfix"></ul>'+
 				'</div>'+
 				'<div class="modal-footer">'+
@@ -96,8 +97,8 @@
 				'</div>'+
 			'</div>';
 			
-			return html
-		},
+			return html;
+		}
 });
 	
 })(zeega.module("modal"));
