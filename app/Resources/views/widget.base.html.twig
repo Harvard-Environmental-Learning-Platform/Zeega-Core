@@ -5,9 +5,9 @@
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>{% block title %}Zeega{% endblock %}</title>
+        <title>{% block title %}Harvard Environmental Learning Platform{% endblock %}</title>
         {% block stylesheets %}
-            <link rel="icon" type="image/png" href="http://zeega.org/images/zeega.ico">
+            <link rel="icon" type="image/png" href="http://zeega.org/images/help.ico">
 			<meta name="robots" content="noindex,follow">
 			<meta name="description" content="">
 			<meta name="keywords" content="">
@@ -17,7 +17,7 @@
 			<link rel="stylesheet" media="screen" type="text/css" href="{{ asset('css/zeega-bootstrap.css')}}" /> 
 			<link rel="stylesheet" media="screen" type="text/css" href="{{ asset('css/zeega.css')}}" /> 
 			<link rel="stylesheet" media="screen" type="text/css" href="{{ asset('css/zeega.widget.css')}}" /> 
-			<link rel="icon" type="image/png" href="{{asset('images/zeega.ico')}}"> 
+			<link rel="icon" type="image/png" href="{{asset('images/help.ico')}}"> 
 		{% endblock %}
 		<script> 
 			sessionStorage.setItem('directory', '{{directory}}');
@@ -68,7 +68,7 @@
 					<div class="container" style='width:450px'>
 						
 						<a class="brand" >
-							<img src="{{ asset('images/zeega-logo-header.png') }}"/>
+							<img src="{{ asset('images/HELP_Globe_small.png') }}"/>
 						</a>
 						
 						<ul class="nav">
@@ -97,7 +97,7 @@
 		</div> <!-- #wrapper -->
 		
 		<footer style="position:fixed; bottom: 0px;">
-			<div>&copy; <a href="http://zeega.org" target="_blank">Zeega</a> {{ "now"|date("Y")}} * <a href="http://www.gnu.org/licenses/gpl.html" target="_blank">GPL License</a></div>
+			<div>&copy; <a href="http://help_platform.zeega.org" target="_blank">Harvard Environmental Lesson Plan</a> {{ "now"|date("Y")}} </div>
 		</footer>
          
 	{% block extras %}{% endblock %}

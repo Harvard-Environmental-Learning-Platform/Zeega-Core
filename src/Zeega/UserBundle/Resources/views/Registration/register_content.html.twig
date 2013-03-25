@@ -47,8 +47,8 @@
 	
 			<div class="page-intro span11">
 			
-				<h1>Join the Zeega Movement!</h1>
-				<h2>Remake the Internet with fellow storytellers, musicians, mememakers, educators, artists and other adventurers.</h2>			
+				<h1>Sign up for the HELP Platform</h1>
+				<h2>More copy</h2>			
 			</div>
 		
 		</div>
@@ -64,25 +64,9 @@
 		
 			<div class="span7" style="width:980px;">
 
-				<div style="float: left;">
 
-        		<a href="#" onclick="fbLogin();" class="login-social" ><img src="{{asset("images/registration/signup-facebook.png")}}"/></a><br/><br>
-				<a href="{{ path("ZeegaSocialBundle_twitter_connect") }}" class="login-social" ><img src="{{asset("images/registration/signup-twitter.png")}}"/></a> <br/>
+				<div style="float:left;">
 
-				
-
-			
-				{% for key, message in app.session.getFlashes() %}
-				<div class="{{ key }}">
-				    {{ message|trans({}, 'FOSUserBundle') }}
-				</div>
-				{% endfor %}
-
-				</div>
-
-				<div style="float:right;">
-
-				<h2 class='message'>Or Sign Up with Email</h2><br>
 
 				<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="form-vertical">
 					<fieldset>
@@ -142,7 +126,7 @@
 								<br/>
 							</div>
 							<div class="span4">
-								By signing up, I agree to Zeega's <a href="{{path("ZeegaCommunityBundle_terms")}}">Terms of Use</a>
+								By signing up, I agree to the <a href="{{path("ZeegaCommunityBundle_terms")}}">Terms of Use</a> for the Harvard Environmental Learning Platform
 							</div>
 						</div>
 					    {{ form_rest(form) }}

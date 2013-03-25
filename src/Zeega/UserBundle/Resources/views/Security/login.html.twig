@@ -56,15 +56,11 @@
     
         <div class='sign-in-head'>
             <a class="brand" href="{{path('ZeegaCommunityBundle_home')}}">
-            <img src="{{ asset('images/zeega-logo-large.png') }}" alt="zeega-logo-large" width="251" height="79">
+            <img src="{{ asset('images/HELP_Globe_home.png') }}" alt="zeega-logo-large" >
             </a>
         
-            <h2>Remake the Internet</h2>
+            <h2>Revolutionizing Teaching and Learning</h2>
         </div>
-        
-        
-        <a href="#" onclick="fbLogin();" class="login-social" ><img src="{{asset("images/registration/login-facebook.png")}}"/></a><br/>
-        <a href="{{ path("ZeegaSocialBundle_twitter_connect") }}" class="login-social" ><img src="{{asset("images/registration/login-twitter.png")}}"/></a> <br/>
 
         {% if error %}
             <div class="error" style="color:red">{{ error }}</div>

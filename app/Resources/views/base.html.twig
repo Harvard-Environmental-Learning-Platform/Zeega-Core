@@ -6,22 +6,22 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" style="height:100%" lang="en-US">
     <head>
-       	<link rel="icon" type="image/png" href="{{ asset('images/zeega.ico')}}">
-       	<title>{% block title %}Zeega{% endblock %}</title>
+       	<link rel="icon" type="image/png" href="{{ asset('images/help.ico')}}">
+       	<title>{% block title %}Harvard Enivironmental Lesson Plan{% endblock %}</title>
         
-		<meta name="description" content="Zeega is a community of makers passionate about creating immersive experiences that combine original content with media from across the web.">
-		<meta name="keywords" content="zeega, storytelling, documentary, interactive">
+		<meta name="description" content="Harvard Enivironmental Lesson Plan">
+		<meta name="keywords" content="">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
         {% block fbshare %}
         
         <!-- FB -->
-		<meta property="og:site_name" content="Zeega"/>
-		<meta property="og:title" content="Zeega"/>
-		<meta property="og:description" content="Zeega is a community of makers passionate about creating immersive experiences that combine original content with media from across the web."/>
+		<meta property="og:site_name" content="Harvard Enivironmental Lesson Plan"/>
+		<meta property="og:title" content="Harvard Enivironmental Lesson Plan"/>
+		<meta property="og:description" content="Harvard Enivironmental Lesson Plan."/>
    		<meta property="og:type" content="website"/>
    		<meta property="og:url" content="{{hostname}}"/>
-    	<meta property="og:image" content="{{hostname}}images/z-logo-fb.png"/>
+    	<meta property="og:image" content="{{hostname}}images/HELP_Globe_small.png"/>
 		<!-- END FB -->	
         
         {% endblock %}
@@ -208,50 +208,33 @@
 								<div class="container">
 									
 									<a class="brand" href="{{path('ZeegaCommunityBundle_home')}}">
-										<img src="{{ asset('images/zeega-logo-header.png') }}"/>
+										<img src="{{ asset('images/HELP_Globe_small.png') }}"/>
 									</a>
 									
 									<ul class="nav">
 										
 									
 										
-										<li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-												About
-												<b class="caret"></b>
-											</a>
-											<ul class="dropdown-menu">
-												
-												<li><a href="http://blog.zeega.com/about">Mission</a></li>
-												<li><a href="{{path('ZeegaCommunityBundle_team')}}">Team</a></li>
-												<li><a href="{{path('ZeegaCommunityBundle_productions')}}">Labs</a></li>
-												<!--<li><a href="{{path('ZeegaCommunityBundle_engine')}}">Engine</a></li>-->
-												<li><a href="{{path('ZeegaCommunityBundle_contact')}}">Contact</a></li>
-												<!--<li><a href="{{path('ZeegaCommunityBundle_news')}}">News</a></li>-->
-												<li class="divider"></li>
-												<li><a href="{{path('ZeegaCommunityBundle_terms')}}">Terms of Use</a></li>
-												<li><a href="{{path('ZeegaCommunityBundle_privacy')}}">Privacy Policy</a></li>
-												<li><a href="http://blog.zeega.com/faq" target="_blank">FAQ</a></li>
-												
-												
-											</ul>
-										</li>
+										<li><a href="{{ path('ZeegaDiscoveryBundle_library') }}" target="_blank">About</a></li>
+
+										
+
 										{% if is_granted('ROLE_ADMIN') %}
 											<li><a href="{{ path('sonata_admin_dashboard') }}" target="_blank">Admin Dashboard</a></li>
-											<li><a href="{{ path('ZeegaDiscoveryBundle_library') }}" target="_blank">Library</a></li><br>
 										{% endif %}
 										
 									</ul>
 									
 									<ul class="nav pull-right">
+										<li><a href="{{ path('ZeegaDiscoveryBundle_library') }}" target="_blank">Library</a></li>
 										<li class="dropdown">
 											<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-												Zeegas
+												Lessons
 												<b class="caret"></b>
 											</a>
 											<ul class="dropdown-menu">
 												
-												<li><a class="new-project" href="{{path('ZeegaEditorBundle_new')}}"><i class='zicon-new-document'></i> New Zeega</a></li>
+												<li><a class="new-project" href="{{path('ZeegaEditorBundle_new')}}"><i class='zicon-new-document'></i> New Lesson</a></li>
 												<li class="divider"></li>
 												
 												{% for project in myprojects %}
@@ -264,39 +247,11 @@
 										</li><!-- project .dropdown -->
 										
 										<li class="divider-vertical"></li>
-										
-										<li><a id="header-add-media" href="#">Add Media</a></li>
-										<li><a href="http://blog.zeega.com/faq" target="_blank">FAQ</a></li>
-										<li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown">Report a Bug<b class="caret"></b></a>
-											<ul class="dropdown-menu bug-report">
-												<li class='bug-unsubmitted'>
-													<div><label>Zeega is an experimental creature. We need your help to make it better! Let us know if something is misbehaving by sending us a brief description of what's wrong:</label></div>
-													<textarea class='bug-description' rows='3'></textarea>
-													<p><i class='icon-ok-sign'></i> a link to the current view will be included automatically</p>
-												</li>
-												<li class='bug-unsubmitted' >
-													<label>Your email (optional):</label>
-													<input class='bug-email' type='text'></input>
-												<li class='bug-unsubmitted'>
-													<button class='btn btn-success submit-bug'>submit</button>
-												</li>
-												<li class='bug-submitted'>
-													<h2>Thanks for your feedback!!</h2>
-													<h3 style='padding-left:80px'>the Zeega team</h3>
-													<br>
-												</li>
-												<li class='bug-submitted'>
-													<button class='btn btn-success close-bug '>close</button>
-												</li>
-												
-											</ul>
-									</li>
 										<li class="dropdown">
 											<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class='icon-user icon-white'></i> {{displayname}}<b class="caret"></b></a>
 											<ul class="dropdown-menu">
 
-												<li><a href="{{ path('ZeegaCommunityBundle_dashboard')}}">User Profile</a></li>
+												<li><a href="{{ path('ZeegaCommunityBundle_dashboard')}}">My Profile</a></li>
 												<li><a href='{{ path('_security_logout')}}'>Logout</a></li>
 											</ul>
 										</li>
@@ -310,31 +265,16 @@
 					<div class="container header new-section">
 						<div class="row">		
 							<div class="span6">
-								<a href="{{ path('ZeegaCommunityBundle_home')}}"><img src="{{ asset('images/zeega-logo.png') }}" alt="zeega-logo" width="134" height="43"></a>
-								<div class="strapline">
-								Remake the Internet
-								</div>
+								<a href="{{ path('ZeegaCommunityBundle_home')}}"><img src="{{ asset('images/HELP_Globe_home.png') }}" alt="zeega-logo" ></a>
+								
 							</div>
 							
 							<div class="span8">
 								<div class="navigation">	
 									<div>
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret" style="vertical-align:middle;border-top:4px solid #037FB3;opacity:1"></b></a>
-											<ul class="dropdown-menu-no-margins dropdown-menu">
-														
-														<li><a href="http://blog.zeega.com/about">Mission</a></li>
-														<li><a href="{{ path('ZeegaCommunityBundle_team')}}">Team</a></li>
-														<li><a href="{{ path('ZeegaCommunityBundle_productions')}}">Labs</a></li>
-														<!--<li><a href="{{ path('ZeegaCommunityBundle_engine')}}">Engine</a></li>-->
-														<li><a href="{{ path('ZeegaCommunityBundle_contact')}}">Contact</a></li>
-														<li class="divider"></li>
-														<li><a href="{{ path('ZeegaCommunityBundle_terms')}}">Terms of Use</a></li>
-														<li><a href="{{ path('ZeegaCommunityBundle_privacy')}}">Privacy Policy</a></li>
-														<li><a href="http://blog.zeega.com/faq" target="_blank">FAQ</a></li>
-														
-														
-													</ul>
-                                                                                        <a href="http://blog.zeega.com" target="_blank">Blog</a>											<a href="{{path('fos_user_registration_register')}}">Sign Up</a><a href='{{path('fos_user_security_login')}}'>Login</a>
+										<a href="#">About</a>
+											
+                                      	<a href="{{path('fos_user_registration_register')}}">Sign Up</a><a href='{{path('fos_user_security_login')}}'>Login</a>
 									</div>
 								</div>
 							</div>
@@ -344,22 +284,6 @@
 					<!-- Header & Nav Ends -->
 				{% endif %}	
 			{% endblock header %}
-
-			{% block browser_detection_content %}
-				<div class="modal hide fade" id="unsupported-browser">
-					  <div class="modal-header">
-					    <button type="button" class="close" data-dismiss="modal">×</button>
-					    <h3>Please update your browser</h3>
-					  </div>
-					  <div class="modal-body">
-					    <p>Your browser is out of date and your experience is important to us. Please update your browser to ensure you can access all of Zeega's features.</p>
-					    <div class="pull-left" style="width:46%;padding:5px;background-color:#fad0d0;margin:5px;border-radius:3px;height:134px;text-align:center"><h4>You are using</h4><span id="unsupported-browser-data" style="font-size:11px;"></span></div>
-					    <div class="pull-left" style="width:46%;padding:5px;background-color:#d3fad0;margin:5px;border-radius:3px;height:134px;text-align:center"><h4>We support </h4><a href="http://www.google.com/chrome/"><div class="browser-logo-chrome"></div></a><a href="http://www.mozilla.org/en-US/firefox/new/"><div class="browser-logo-firefox"></div></a><a href=""><div class="browser-logo-safari"></div></a><a href="http://www.microsoft.com/IE9"><div class="browser-logo-ie"></div></a><br/><span style="font-size:11px">Latest versions</span>
-
-					    </div>
-					  </div>			  
-				</div>
-			{% endblock browser_detection_content %}
 		
 			<div id="editor" class='clearfix'>
 				{% block body %}
@@ -375,68 +299,26 @@
  						<div class="navbar-inner">
     						<div class="container">
 								<h5> 
-									&copy; <a href="http://zeega.com" target="_blank">Zeega</a> {{ "now"|date("Y")}} |  364a Broadway Cambridge, MA 02139 | <a href="mailto:info@zeega.com">info [at] zeega.com</a> | <a href="http://blog.zeega.com/faq" target="_blank">FAQ</a> | <a href="{{ path('ZeegaCommunityBundle_terms')}}">Terms of Use</a> | <a href="{{ path('ZeegaCommunityBundle_privacy')}}">Privacy Policy</a> | Accelerated with pride <a href = "http://twitter.com/mattervc" target="_blank">@mattervc</a>
+									&copy; <a href="http://help_platform.zeega.org" target="_blank">Harvard Environmental Learning Platform</a> {{ "now"|date("Y")}} |  Cambridge, MA | <a href="mailto:help_platform@zeega.org">help_platform [at] zeega.org</a>
 								</h5>
 							</div>
 						</div>
 					</div>
 				</div>
 				<!-- Logged-in Footer Ends -->
-				
-				<!-- Add media modal -->
-				<div id='add-media' class="modal" style="display:none; top:314px">
-					<a class="close" href="#" data-dismiss="modal" >&times;</a>
-					To install the Zeega bookmarklet, follow the directions below:<br><br><br>						
-						<div id="book-one" style="float: left;">
-							<img src="{{ asset('images/chrome-logo.gif') }}" style="margin-left: 25px;"/>
-							<br>
-							<br>
-							Access Zeega from the<br>
-							<a href="http://google.com/chrome" target="_blank">latest Chrome browser</a>
-						</div>				
-						<div id="book-two" style="float: left; margin-left: 20px;">
-							<img src="{{ asset('images/view-bookmarks.gif') }}" style="margin-left: 25px; margin-top: 25px;"/>
-							<br><br><br>
-							<span style="display: block; margin-left: 55px; margin-top: 2px;">
-								Under the view menu, select<br>
-								"Always show Bookmarks Bar"
-							</span>
-						</div>				
-						<div id="book-three" style="float: left; margin-left: 30px;">
-							<a href="javascript:(function()%7Bvar%20head=document.getElementsByTagName('body')%5B0%5D,script=document.createElement('script');script.id='zeegabm';script.type='text/javascript';script.src='{{hostname}}{{directory}}js/widget/zeega.bookmarklet.js?'%20+%20Math.floor(Math.random()*99999);head.appendChild(script);%7D)();%20void%200"><img src="{{ asset('images/drag-zeega.gif') }}" style="margin-left: 25px; margin-top: 0px;" alt="Add to Zeega"/></a>
-							<br>
-							<span style="display: block; margin-left: 5px; margin-top: 10px;">
-								Drag this icon to the<br>
-								Bookmarks Bar within<br>
-								the browser
-							</span>
-						</div>				
-						<div id="book-four" style="float: left; margin-left: 30px;">
-							<img src="{{ asset('images/bookmark-confirm.gif') }}" style="margin-left: 35px; margin-top: 13px;"/>
-							<br>
-							<span style="display: block; margin-left: 17px; margin-top: 10px;">
-								"Add to Zeega" will now appear in your Bookmarks<br> Bar. As you find media across the web, click this<br> to open the bookmarklet plugin.
-							</span>
-						</div>				
-					<div class="clear" style="clear: both;"></div>
-				</div>
+
 			{% else %}
+
 				<!-- Non-logged-in Footer Begins -->
 				<div class="footer">
 					<div class="container">
 						<div class="row">
 							<div class="span5">
-								<img src="{{ asset('images/zeega-logo.png') }}" alt="zeega-logo" width="134" height="43">
-								<div class="strapline">
-								Remake the Internet
-								</div>
-								<p><small>Zeega is revolutionizing web publishing and interactive storytelling for a future beyond blogs.</small></p>
+								<img src="{{ asset('images/HELP_Globe_home.png') }}" alt="zeega-logo">
+								
+								<p><small>Harvard Environmental Learning Platform</small></p>
 								<p><small>
-									<a href="mailto:info@zeega.com">info@zeega.com</a><br>
-									<a href="http://www.twitter.com/zeega">@zeega</a><br>
-									421 Bryant St, San Francisco CA 94107<br>
-									Accelerated with pride <a href = "http://twitter.com/mattervc" target="_blank">@mattervc</a>
-
+									<a href="mailto:help_platform@zeega.org">help_platform@zeega.org</a><br>
 								</small></p>
 							</div>
 							<div class="footer-navigation span3 offset6">
