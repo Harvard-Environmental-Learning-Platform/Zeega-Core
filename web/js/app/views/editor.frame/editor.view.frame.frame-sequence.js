@@ -58,7 +58,7 @@
 				{
 					ui.draggable.draggable('option','revert',false);
 					_this.model.addItemLayer( zeega.app.draggedItem );
-					_this.model.trigger('layer_added')
+					_this.model.trigger('layer_added');
 				}
 				//this happens when you drop a database item onto a frame
 
@@ -90,7 +90,7 @@
 					break;
 					
 				default:
-					console.log('not recognized')
+					console.log('not recognized');
 			}
 			return false;
 		},
@@ -125,8 +125,8 @@
 					"<ul class='flag-menu'>"+
 						"<a href='#' class='menu-toggle'><i class='icon-cog icon-white'></i></a>"+
 						"<ul class='frame-action-menu'>"+
-							"<li><a href='#' data-action='duplicate'>Duplicate Frame</a></li>"+
-							"<li><a href='#' data-action='delete'>Delete Frame</a></li>"+
+							"<li><a href='#' data-action='duplicate'>Duplicate Slide</a></li>"+
+							"<li><a href='#' data-action='delete'>Delete Slide</a></li>"+
 						"</ul>"+
 					"</ul>"+
 				"</a>";
