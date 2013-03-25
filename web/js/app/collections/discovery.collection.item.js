@@ -85,7 +85,7 @@
             
             if( !_.isUndefined(this.query.content) && "all" !== this.query.content ){
                 if(this.query.content === "Course"){
-                    url += "layer_type=Course";
+                    url += "&layer_type=Course";
                 } else {
                     url += "&type=" + this.query.content;
                 }
