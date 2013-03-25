@@ -1060,8 +1060,8 @@ a.label:hover,a.badge:hover{color:#ffffff;text-decoration:none;cursor:pointer;}
 .collection-list{background:url('../../../images/paper-dark.png');}
 li.static-collection{background-color:rgba(255, 255, 255, 0.1);}
 li.static-collection:hover{background-color:rgba(255, 255, 255, 0.25);-webkit-transition:background-color 0.25s linear;}
-li.dynamic-collection{background-color:rgba(0, 255, 0, 0.4);}
-li.dynamic-collection:hover{background-color:rgba(0, 255, 0, 0.7);-webkit-transition:background-color 0.25s linear;}
+li.course-collection{background-color:rgba(0, 255, 0, 0.4);}
+li.course-collection:hover{background-color:rgba(0, 255, 0, 0.7);-webkit-transition:background-color 0.25s linear;}
 li.collection-list-item{padding:5px 10px;-webkit-transition:background-color 0.25s linear;margin-bottom:1px;color:#DDD;border-radius:0 2px 2px 0;list-style:none;cursor:pointer;}
 li.collection-list-item .collection-super{cursor:pointer;}
 li.collection-list-item .collection-title{display:inline-block;width:200px;white-space:nowrap;overflow:hidden;margin-left:5px;font-weight:bold;font-size:11px;cursor:pointer;}
