@@ -48,9 +48,9 @@
             blanks["num_projects"] = blanks["projects"].length;
             
             if(blanks["num_projects"] == 1)
-                blanks["num_projects"] = blanks["num_projects"] + " project";
+                blanks["num_projects"] = blanks["num_projects"] + " lesson";
             else
-                blanks["num_projects"] = blanks["num_projects"] + " projects";
+                blanks["num_projects"] = blanks["num_projects"] + " lessons";
             
             //Should be fixed in database
             if(_.isUndefined(blanks["thumbnail_url"])||_.isNull(blanks["thumbnail_url"])||blanks["thumbnail_url"]==="")blanks["thumbnail_url"]="../images/vertov.jpeg";
@@ -282,7 +282,7 @@
                     "</div>"+
                     "<div class='span3'>";
                         if (zeega.dashboard.app.editable){ html+=
-                        "<a class='btn btn-info pull-right user-new-project' href='"+$(".new-project").attr("href")+"'>Create a New Zeega</a>";
+                        "<a class='btn btn-info pull-right user-new-project' href='"+$(".new-project").attr("href")+"'>Create a New Lesson</a>";
                         }
             html+="</div>";
             

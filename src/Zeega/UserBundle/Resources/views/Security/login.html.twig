@@ -13,7 +13,7 @@
         */
     
         html { 
-            background: url({{asset("images/registration/login.jpg")}}) no-repeat center center fixed;
+            background: url({{asset("images/background.jpg")}}) no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
@@ -57,15 +57,18 @@
             <a class="brand" href="{{path('ZeegaCommunityBundle_home')}}">
             <img src="{{ asset('images/HELP_Globe_home.png') }}" alt="zeega-logo-large" >
             </a>
-        
-            <h2>Revolutionizing Teaching and Learning</h2>
+
         </div>
 
         {% if error %}
             <div class="error" style="color:red">{{ error }}</div>
         {% endif %}
         
-        <br><h2 class='message'>Login with your email</h2>
+
+
+
+        <br><h2 class='message'>Login</h2>
+
         <form class="form-vertical" action="{{ path("fos_user_security_check") }}" method="post">
           <fieldset>
             <div class="control-group"> 
