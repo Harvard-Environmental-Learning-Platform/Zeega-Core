@@ -25,22 +25,24 @@
             imageData.append( "file", fileInput.files[0] );
 
             $.ajax({
-                url: "../upload/upload.php",
+                url: sessionStorage.getItem("hostname") + "kinok/image",
+                type: "POST",
                 data: imageData,
                 dataType: "json",
                 processData: false,
                 contentType: false,
-                type: "POST",
+                fileElementId: "imagefile",
+                
                 success: function( data ) {
 
                     $(fileInput).parent('span').css({
-                        "background-image" : "url(" + data.url + ")",
+                        "background-image" : "url(" + data.image_url_4 + ")",
                         "background-size" : "cover"
                     });
                     
                     zeega.app.addItem( data );
 
-                    this.$el.find("#image-uploads").append("<span class='add-photo' href='#'><input type='file' href='#'></input></span>");
+                    this.$el.find("#image-uploads").append("<span class='add-photo' href='#'><input id = 'imagefile' name = 'imagefile' type='file' href='#'></input></span>");
                     
                 }.bind(this)
             });
@@ -61,7 +63,7 @@
                     "<div id = 'image-uploads' >"+
                         "<p>upload images for your computer</p>"+
                         "<span class='add-photo' href='#'>"+
-                            "<input type='file' href='#'></input>"+
+                            "<input id = 'imagefile'  name = 'imagefile'  type='file' href='#'></input>"+
                         "</span>"+
                     "</div>"+
                     "<div id = 'bookmarklet-instructions' >"+
