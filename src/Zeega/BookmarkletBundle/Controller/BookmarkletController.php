@@ -120,50 +120,6 @@ class BookmarkletController extends BaseController
                         );
                     }
                 }
-                else if($parsedItem["archive"] == "Facebook")
-                {
-                    // Facebook - needs to be loaded in a pop-up
-
-                    if($parsedItem["child_items_count"]==-1){ // no access token.  overloading child_items_count is a hack.  Find cleaner way soon.
-                        //header('X-Frame-Options: Allow'); 
-                        $requirePath = __DIR__ . '/../../../../vendor/facebook/facebook.php';
-                        require_once $requirePath;
-                        $facebook = new \Facebook(array(
-                          'appId'  => '459848834048078',
-                          'secret' => 'f5b344b91bff03ace4df454e35fca4e4',
-                        ));
-                        $loginUrlParams = array(
-                        'scope'   => 'user_photos,friends_photos',
-                        'display' => 'popup'
-                        );
-                        $loginUrl = $facebook->getLoginUrl($loginUrlParams);
-                        return $this->render(
-                            'ZeegaBookmarkletBundle:Bookmarklet:facebookWelcome.widget.html.twig', 
-                            array(
-                                'displayname' => $user->getDisplayname(),
-                                'widget_id'=>$widgetId,
-                                'item'=>json_encode($parsedItem), 
-                                'update'=>$update,
-                                'archive'=>$parsedItem["archive"],
-                                'child_items_count'=>$parsedItem["child_items_count"],
-                                'login_url' => $loginUrl,
-                            )
-                        );    
-                    }else{ // access token
-                        return $this->render(
-                            'ZeegaBookmarkletBundle:Bookmarklet:widget.html.twig', 
-                            array(
-                                'displayname' => $user->getDisplayname(),
-                                'widget_id'=>$widgetId,
-                                'item'=>json_encode($parsedItem), 
-                                'update'=>$update,
-                                'archive'=>$parsedItem["archive"],
-                                'thumbnail_url'=>$parsedItem["thumbnail_url"],    
-                                'child_items_count'=>$parsedItem["child_items_count"],
-                            )
-                        );    
-                    }
-                }
                 else if($update)
                 {
                     return $this->render(

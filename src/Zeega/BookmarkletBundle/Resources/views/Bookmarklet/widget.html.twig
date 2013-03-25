@@ -1,6 +1,6 @@
 
 
-{# src/Zeega/\CoreBundle\/Resources/views/Widget/fail.widget.html.twig #}
+{# src/Zeega/\CoreBundle\/Resources/views/Widget/widget.html.twig #}
 
 {% extends '::widget.base.html.twig' %}
 
@@ -42,10 +42,7 @@
 			<div style="clear:both;">&nbsp;</div>
 			<div class='widget-message' id="begin-message"></div>
 			
-			{% if archive == 'Dropbox' %}
-			<div class='widget-message' id="message">Dropbox media successfully added to your Zeega Collection.</div>
-			{% else %}
-			<div class='widget-message' id="message">Media successfully added to your Zeega Collection.</div>
+			<div class='widget-message' id="message">Media successfully added.</div>
 			<div style="clear:both;">&nbsp;</div>
 			<div id="message"></div>
 			<h3>Title:</h3>

@@ -2,12 +2,10 @@
 
 {% extends '::widget.base.html.twig' %}
 
-{% block title %}Zeega Alpha{% endblock %}
-
 {% block body %}
 
 	<div id="widget-wrapper" data-id="{{widget_id}}" class='well'> 
-		<h3>You've already added this {{item.getMediaType()}} to Zeega!</h3>
+		<h3>You've already added this {{item.getMediaType()}}!</h3>
 		<br/>
 		<div id="item-view">
 			<img src="{{item.getThumbnailUrl()}}" style="max-width:150px; max-height:150px;" id="item-image" class="item-image" />
