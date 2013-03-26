@@ -26,7 +26,7 @@
 					var itemView = new Items.Views.CollectionItem({model:itemModel});
 					_this._childViews.push( itemView );
 					$(_this.el).append( itemView.render().el );
-				})
+				});
 			}
 			else
 			{

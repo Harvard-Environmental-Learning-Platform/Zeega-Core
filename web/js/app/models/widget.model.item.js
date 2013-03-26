@@ -22,11 +22,11 @@
 		{
 			this.tags.reset({silent:true});
 			this.tags.item_id=this.id;
-			this.tags.fetch({ 
+			this.tags.fetch({
 				success:successFunction,
-				error:errorFunction,
+				error:errorFunction
 			});
-		},
+		}
 
 	});
 

@@ -24,11 +24,11 @@
 			this.$el.find('#add-item').click(function(){
 				$(this).fadeOut();
 
-				$('#begin-message').html("Adding media to Zeega.");
-				var errorMessage = 'Unable to add Media to your Zeega Collection';
+				$('#begin-message').html("Adding media.");
+				var errorMessage = 'Unable to add Media';
 
 				if(media_type == 'Collection') {
-					errorMessage = "Your media was added to Zeega and is being processed. It might take a few minutes before you can see it on the editor.";
+					errorMessage = "Your media was added to the HELP Platform and is being processed. It might take a few minutes before you can see it on the editor.";
 				}
 
 				var itemType = item.get("media_type");
