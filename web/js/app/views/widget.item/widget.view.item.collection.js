@@ -3,11 +3,11 @@
 	//renders individual items in a search be they collection or image or audio or video type
 	Items.Views.CollectionItem = Backbone.View.extend({
 		
-	    tagName : 'span',
+		tagName : 'span',
 
 		initialize : function() {},
 
-		render: function()                 
+		render: function()
 		{
 			var _this = this;
 
